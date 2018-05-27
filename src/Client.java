@@ -27,4 +27,8 @@ public class Client extends InterfaceComm {
         String response = read();
         System.out.println(response);
     }
+    
+    public static void main(String[] args) throws IOException {
+        (new Thread(new Client())).start();
+    }
 }
