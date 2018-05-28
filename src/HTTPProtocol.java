@@ -42,6 +42,7 @@ public class HTTPProtocol {
     
     private static String getResponse404(String data) {
         String msg = "404 Not Found\r\n";
+        msg += "\r\nNot Found !";
         return msg;
     }
     

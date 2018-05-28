@@ -26,7 +26,7 @@ public class Client extends InterfaceComm {
     
     @Override
     public void process() {
-        String res = "index.html";
+        String res = "index2.html";
         getResource(res);
         String response = read();
 //        System.out.println("Reponse : \n" + response + "\nFin");

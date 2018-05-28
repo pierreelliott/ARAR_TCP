@@ -35,8 +35,12 @@ public class Serveur extends InterfaceComm {
     public void respondToGET(String request) {
         String resURL = HTTPProtocol.getResURL(request);
         try {
+            File resDemandee = new File(resURL);
+            if(!resDemandee.exists()) {
+                throw new Exception("Aaaaaaaah !");
+            }
             Reader file = new InputStreamReader(
-                            new FileInputStream(new File(resURL)));
+                            new FileInputStream(resDemandee));
             StringBuilder builder = new StringBuilder();
             char[] buffer = new char[512];
             int nbRead = file.read(buffer);
