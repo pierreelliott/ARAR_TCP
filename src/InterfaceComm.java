@@ -48,6 +48,9 @@ public class InterfaceComm implements Runnable {
     }
     
     public String read() {
+        // TODO
+        // A modifier pour lire (et plus tard écrire) directement des bytes
+        // Ca posera moins de soucis pour savoir comment interpréter les caractères
         try {
             StringBuilder builder = new StringBuilder();
             char[] buffer = new char[512];
@@ -59,13 +62,7 @@ public class InterfaceComm implements Runnable {
                 }
                 nbRead = in.read(buffer);
             }
-            String msg;
-            msg = builder.toString();
-
-            /*msg = in.readLine();
-            while(in.ready()) {
-                msg += "\r\n" + in.readLine();
-            }*/
+            String msg = builder.toString();
             return msg;
         } catch (Exception ex) {
             ex.printStackTrace();
