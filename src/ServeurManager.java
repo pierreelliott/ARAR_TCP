@@ -1,6 +1,7 @@
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -23,9 +24,16 @@ public class ServeurManager implements Runnable {
 
     @Override
     public void run() {
-        while(true) {
+        ServerSocket srvSock = null;
+        boolean finished = false;
+        try {
+            srvSock = new ServerSocket(2000);
+            System.out.println("Serveur lancé");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        while(!finished) {
             try{
-                ServerSocket srvSock = new ServerSocket(2000);
                 Socket accept = srvSock.accept();
                 Serveur comm = new Serveur(accept);
                 (new Thread(comm)).start();
@@ -33,7 +41,13 @@ public class ServeurManager implements Runnable {
 
             }catch(Exception ex){
                 System.err.println("Exception in Server : " + ex);
+                finished = true;
             }
+        }
+        try {
+            srvSock.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     

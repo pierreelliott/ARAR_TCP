@@ -31,6 +31,7 @@ public class HTTPProtocol {
     
     private static String getResponse200(String data) {
         String msg = "200 OK\r\n";
+        msg += "\r\n" + data;
         return msg;
     }
     
@@ -57,5 +58,10 @@ public class HTTPProtocol {
         } else {
             return "index.html";
         }
+    }
+
+    public static String getContent(String request) {
+        String[] res = request.split("\r\n\r\n");
+        return request.substring(res[0].length()+4);
     }
 }

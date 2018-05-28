@@ -1,8 +1,5 @@
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,6 +22,7 @@ public class Serveur extends InterfaceComm {
     
     public void process() {
         String msg = read();
+        System.out.println(msg);
         if(HTTPProtocol.isGET(msg)) {
             respondToGET(msg);
         } else if(HTTPProtocol.isPUT(msg)) {
@@ -37,15 +35,18 @@ public class Serveur extends InterfaceComm {
     public void respondToGET(String request) {
         String resURL = HTTPProtocol.getResURL(request);
         try {
-            BufferedReader file = new BufferedReader(new FileReader(resURL));
-            String line, fileContent = "";
-            while( (line = file.readLine()) != null ) {
-                if(line.isEmpty()) {
-                    break;
-                } else {
-                    fileContent += line;
-                }
+            Reader file = new InputStreamReader(
+                            new FileInputStream(new File(resURL)));
+            StringBuilder builder = new StringBuilder();
+            char[] buffer = new char[512];
+            int nbRead = file.read(buffer);
+            while(nbRead > 0) {
+                builder.append(buffer, 0, nbRead);
+                nbRead = file.read(buffer);
             }
+
+            String fileContent = builder.toString();
+
             respond(200, fileContent);
         } catch (Exception ex) {
             Logger.getLogger(Serveur.class.getName()).log(Level.SEVERE, null, ex);

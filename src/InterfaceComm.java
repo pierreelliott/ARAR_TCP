@@ -1,8 +1,5 @@
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,15 +16,15 @@ import java.util.logging.Logger;
  */
 public class InterfaceComm implements Runnable {
     
-    private Socket socket;
+    protected Socket socket;
     private boolean finished = false;
     private DataOutputStream out;
-    BufferedReader in;
+    InputStreamReader in;
     
     public InterfaceComm(Socket sock) throws IOException {
         socket = sock;
         out = new DataOutputStream(socket.getOutputStream());
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        in = new InputStreamReader(socket.getInputStream());
     }
 
     @Override
@@ -37,9 +34,14 @@ public class InterfaceComm implements Runnable {
                 process();
             } catch (Exception e) {
                 e.printStackTrace();
+                setFinished();
             }
         }
+        out = null;
+        in = null;
     }
+
+    public void setFinished() { finished = true; }
     
     public void process() {
         String msg = read();
@@ -47,17 +49,34 @@ public class InterfaceComm implements Runnable {
     
     public String read() {
         try {
-            String msg = in.readLine();
+            StringBuilder builder = new StringBuilder();
+            char[] buffer = new char[512];
+            int nbRead = in.read(buffer);
+            while(nbRead > 0) {
+                builder.append(buffer, 0, nbRead);
+                if(!in.ready()) {
+                    break;
+                }
+                nbRead = in.read(buffer);
+            }
+            String msg;
+            msg = builder.toString();
+
+            /*msg = in.readLine();
+            while(in.ready()) {
+                msg += "\r\n" + in.readLine();
+            }*/
             return msg;
         } catch (Exception ex) {
             ex.printStackTrace();
+            setFinished();
         }
         return "";
     }
     
     public void send(String text) {
         try {
-            out.writeChars(text);
+            out.write(text.getBytes("UTF-8"));
             out.flush();
         } catch (IOException ex) {
             Logger.getLogger(InterfaceComm.class.getName()).log(Level.SEVERE, null, ex);
@@ -66,6 +85,7 @@ public class InterfaceComm implements Runnable {
     
     public void getResource(String url) {
         String text = HTTPProtocol.getResource(url);
+        System.out.println(text);
         send(text);
     }
     
