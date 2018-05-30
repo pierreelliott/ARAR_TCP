@@ -9,6 +9,14 @@
  * @author belette
  */
 public class HTTPProtocol {
+
+    public static String setResource(String url, String data) {
+        String msg;
+        msg = "GET " + url + " HTTP/1.1\r\n";
+        msg += "\r\n";
+        msg += data;
+        return msg;
+    }
     
     public static String getResource(String url) {
         String msg;
@@ -22,6 +30,7 @@ public class HTTPProtocol {
         switch(code) {
             case 200: msg += getResponse200(data); break;
             case 201: msg += getResponse201(data); break;
+            case 403: msg += getResponse403(data); break;
             case 404:
             default: msg += getResponse404(data); break;
         }
@@ -37,6 +46,12 @@ public class HTTPProtocol {
     
     private static String getResponse201(String data) {
         String msg = "201 Created\r\n";
+        return msg;
+    }
+
+    private static String getResponse403(String data) {
+        String msg = "403 No Permissions\r\n";
+        msg += "\r\nNot Allowed !";
         return msg;
     }
     

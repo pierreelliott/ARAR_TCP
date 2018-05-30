@@ -21,7 +21,7 @@ public class Serveur extends InterfaceComm {
     }
     
     public void process() {
-        String msg = read();
+        String msg = read(in);
         System.out.println(msg);
         if(HTTPProtocol.isGET(msg)) {
             respondToGET(msg);
@@ -41,15 +41,13 @@ public class Serveur extends InterfaceComm {
             }
             Reader file = new InputStreamReader(
                             new FileInputStream(resDemandee));
-            StringBuilder builder = new StringBuilder();
-            char[] buffer = new char[512];
-            int nbRead = file.read(buffer);
-            while(nbRead > 0) {
-                builder.append(buffer, 0, nbRead);
-                nbRead = file.read(buffer);
+            String fileContent = read(file);
+            if(hasFinished()) {
+                return;
             }
 
-            String fileContent = builder.toString();
+            System.out.println("File :");
+            System.out.println(fileContent);
 
             respond(200, fileContent);
         } catch (Exception ex) {
@@ -59,7 +57,26 @@ public class Serveur extends InterfaceComm {
     }
     
     public void respondToPUT(String request) {
-        
+        String resURL = HTTPProtocol.getResURL(request);
+        try {
+            File resDemandee = new File(resURL);
+            if(resDemandee.exists()) {
+                respond(403, request);
+                return;
+            }
+            String contenu = HTTPProtocol.getContent(request);
+            BufferedWriter file = new BufferedWriter(new FileWriter(new File("put_" + resURL)));
+            file.write(contenu);
+            file.flush();
+
+            System.out.println("File :");
+            System.out.println(contenu);
+
+            respond(200, contenu);
+        } catch (Exception ex) {
+            Logger.getLogger(Serveur.class.getName()).log(Level.SEVERE, null, ex);
+            respond(404, request);
+        }
     }
     
     public void respondError(String request) {
