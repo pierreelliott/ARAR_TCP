@@ -18,28 +18,31 @@ import java.net.Socket;
 public class Client extends InterfaceComm {
     
     public Client() throws Exception {
-        super(new Socket(InetAddress.getByName("127.0.0.1"), 2000));
+        super(new Socket(InetAddress.getByName("134.214.117.160"), 2000));
     }
     
     @Override
     public void process() {
-        String res = "index.html";
+        String res = "test.png";
         getResource(res);
         String response = read(in);
-//        System.out.println("Reponse : \n" + response + "\nFin");
         String contenu = HTTPProtocol.getContent(response);
-        System.out.println("Reponse\n" + contenu + "\nFin");
+        System.out.println("Reponse\n" + response + "\nFin");
         try {
-            BufferedWriter file = new BufferedWriter(new FileWriter(new File("reponse_" + res)));
+            BufferedWriter file = new BufferedWriter(new FileWriter(new File("client_" + res)));
             file.write(contenu);
             file.flush();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        res = "test_put.html";
+        System.out.println("===========================================");
+
+        res = "putFile.html";
         try {
             setResource(res, res);
+            response = read(in);
+            System.out.println("Reponse\n" + response + "\nFin");
         } catch (Exception e) {
             e.printStackTrace();
         }

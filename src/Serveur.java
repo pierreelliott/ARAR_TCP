@@ -72,7 +72,7 @@ public class Serveur extends InterfaceComm {
             System.out.println("File :");
             System.out.println(contenu);
 
-            respond(200, contenu);
+            respond(201, contenu);
         } catch (Exception ex) {
             Logger.getLogger(Serveur.class.getName()).log(Level.SEVERE, null, ex);
             respond(404, request);

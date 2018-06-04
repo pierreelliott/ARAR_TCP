@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="c7c716ca-4e44-46dc-be37-d8cba35992a0" name="Default" comment="" />
-=======
     <list default="true" id="c7c716ca-4e44-46dc-be37-d8cba35992a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/Client.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/Client.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/HTTPProtocol.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/HTTPProtocol.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/InterfaceComm.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/InterfaceComm.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/Serveur.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/Serveur.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reponse_index2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" afterPath="$PROJECT_DIR$/src/Client.java" />
-      <change beforePath="$PROJECT_DIR$/src/HTTPProtocol.java" afterPath="$PROJECT_DIR$/src/HTTPProtocol.java" />
-      <change beforePath="$PROJECT_DIR$/src/InterfaceComm.java" afterPath="$PROJECT_DIR$/src/InterfaceComm.java" />
-      <change beforePath="$PROJECT_DIR$/src/Serveur.java" afterPath="$PROJECT_DIR$/src/Serveur.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reponse_index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_put.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/Client.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/HTTPProtocol.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/HTTPProtocol.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/InterfaceComm.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/InterfaceComm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARAR_TCP/Serveur.class" afterPath="$PROJECT_DIR$/out/production/ARAR_TCP/Serveur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client.java" afterPath="$PROJECT_DIR$/src/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTPProtocol.java" afterPath="$PROJECT_DIR$/src/HTTPProtocol.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InterfaceComm.java" afterPath="$PROJECT_DIR$/src/InterfaceComm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Serveur.java" afterPath="$PROJECT_DIR$/src/Serveur.java" />
     </list>
->>>>>>> 325679863cbecf51d82bc2f08597671a474d126d
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+            <state relative-caret-position="125">
+              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -42,41 +38,29 @@
       <file leaf-file-name="ServeurManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ServeurManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="244">
+              <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Serveur.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Serveur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Serveur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-              <folding>
-                <element signature="e#2405#2406#0" expanded="true" />
-                <element signature="e#2442#2443#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfaceComm.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InterfaceComm.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InterfaceComm.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="291">
-              <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+            <state relative-caret-position="938">
+              <caret line="101" column="10" lean-forward="false" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
               <folding />
-=======
-            <state relative-caret-position="2007">
-              <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-              <folding>
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-              </folding>
->>>>>>> 325679863cbecf51d82bc2f08597671a474d126d
             </state>
           </provider>
         </entry>
@@ -84,8 +68,8 @@
       <file leaf-file-name="HTTPProtocol.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HTTPProtocol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -105,10 +89,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ServeurManager.java" />
-        <option value="$PROJECT_DIR$/src/InterfaceComm.java" />
         <option value="$PROJECT_DIR$/src/HTTPProtocol.java" />
-        <option value="$PROJECT_DIR$/src/Client.java" />
         <option value="$PROJECT_DIR$/src/Serveur.java" />
+        <option value="$PROJECT_DIR$/src/InterfaceComm.java" />
+        <option value="$PROJECT_DIR$/src/Client.java" />
       </list>
     </option>
   </component>
@@ -140,7 +124,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -159,6 +142,7 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,13 +166,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Client">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
     <configuration name="Client" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Client" />
@@ -216,6 +193,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="ARAR_TCP" />
       <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -251,6 +235,12 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -285,12 +275,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Serveur" />
       <item index="1" class="java.lang.String" itemvalue="Application.Client" />
@@ -310,18 +294,16 @@
       <option name="presentableId" value="Default" />
       <updated>1527488072365</updated>
       <workItem from="1527488081112" duration="6270000" />
+      <workItem from="1528100620526" duration="2528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6270000" />
+    <option name="totallyTimeSpent" value="8798000" />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-=======
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
->>>>>>> 325679863cbecf51d82bc2f08597671a474d126d
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -331,16 +313,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
->>>>>>> 325679863cbecf51d82bc2f08597671a474d126d
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2457356" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2453125" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -351,7 +330,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -371,6 +349,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServeurManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterfaceComm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTPProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Serveur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding />
@@ -381,10 +399,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-          <folding>
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2442#2443#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -408,62 +423,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
           <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding>
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_77/src.zip!/java/lang/Thread.java" />
-    <entry file="file://$PROJECT_DIR$/src/HTTPProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ServeurManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfaceComm.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="291">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-=======
-        <state relative-caret-position="2007">
-          <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-          <folding>
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
->>>>>>> 325679863cbecf51d82bc2f08597671a474d126d
+        <state relative-caret-position="244">
+          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Serveur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-          <folding>
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2442#2443#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTPProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterfaceComm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="101" column="10" lean-forward="false" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

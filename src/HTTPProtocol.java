@@ -12,7 +12,7 @@ public class HTTPProtocol {
 
     public static String setResource(String url, String data) {
         String msg;
-        msg = "GET " + url + " HTTP/1.1\r\n";
+        msg = "PUT " + url + " HTTP/1.1\r\n";
         msg += "\r\n";
         msg += data;
         return msg;

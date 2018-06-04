@@ -99,7 +99,7 @@ public class InterfaceComm implements Runnable {
         String data = read(new InputStreamReader(
                 new FileInputStream(new File(localPath))));
         String text = HTTPProtocol.setResource(url, data);
-        System.out.println(text);
+        //System.out.println(text);
         send(text);
     }
     
