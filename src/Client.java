@@ -1,8 +1,5 @@
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
@@ -26,9 +23,9 @@ public class Client extends InterfaceComm {
     
     @Override
     public void process() {
-        String res = "index2.html";
+        String res = "index.html";
         getResource(res);
-        String response = read();
+        String response = read(in);
 //        System.out.println("Reponse : \n" + response + "\nFin");
         String contenu = HTTPProtocol.getContent(response);
         System.out.println("Reponse\n" + contenu + "\nFin");
@@ -36,10 +33,23 @@ public class Client extends InterfaceComm {
             BufferedWriter file = new BufferedWriter(new FileWriter(new File("reponse_" + res)));
             file.write(contenu);
             file.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        res = "test_put.html";
+        try {
+            setResource(res, res);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        setFinished();
+        try {
+            socket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        setFinished();
     }
     
     public static void main(String[] args) throws Exception {

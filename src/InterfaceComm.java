@@ -42,46 +42,63 @@ public class InterfaceComm implements Runnable {
     }
 
     public void setFinished() { finished = true; }
+    public boolean hasFinished() { return finished; }
     
     public void process() {
-        String msg = read();
+        String msg = read(in);
     }
     
-    public String read() {
+    public String read(Reader reader) {
         // TODO
         // A modifier pour lire (et plus tard écrire) directement des bytes
         // Ca posera moins de soucis pour savoir comment interpréter les caractères
         try {
             StringBuilder builder = new StringBuilder();
             char[] buffer = new char[512];
-            int nbRead = in.read(buffer);
+            int nbRead = reader.read(buffer);
+            int offset = 0;
             while(nbRead > 0) {
-                builder.append(buffer, 0, nbRead);
+                builder.append(buffer, offset, nbRead);
                 if(!in.ready()) {
                     break;
                 }
-                nbRead = in.read(buffer);
+                offset += nbRead;
+                nbRead = reader.read(buffer);
             }
             String msg = builder.toString();
             return msg;
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             setFinished();
         }
         return "";
     }
+
+    /*public ByteArrayOutputStream read(Reader reader, boolean second) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        ByteArrayInputStream bytesIn = new ByteArrayInputStream(reader);
+    }*/
     
     public void send(String text) {
         try {
             out.write(text.getBytes("UTF-8"));
             out.flush();
         } catch (IOException ex) {
-            Logger.getLogger(InterfaceComm.class.getName()).log(Level.SEVERE, null, ex);
+//            ex.printStackTrace();
+            setFinished();
         }
     }
     
     public void getResource(String url) {
         String text = HTTPProtocol.getResource(url);
+        System.out.println(text);
+        send(text);
+    }
+
+    public void setResource(String url, String localPath) throws FileNotFoundException {
+        String data = read(new InputStreamReader(
+                new FileInputStream(new File(localPath))));
+        String text = HTTPProtocol.setResource(url, data);
         System.out.println(text);
         send(text);
     }
