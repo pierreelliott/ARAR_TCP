@@ -18,8 +18,8 @@ public class InterfaceComm implements Runnable {
     
     protected Socket socket;
     private boolean finished = false;
-    private DataOutputStream out;
-    InputStreamReader in;
+    protected DataOutputStream out;
+    protected InputStreamReader in;
     
     public InterfaceComm(Socket sock) throws IOException {
         socket = sock;
@@ -46,6 +46,27 @@ public class InterfaceComm implements Runnable {
     
     public void process() {
         String msg = read(in);
+    }
+
+//    public byte[] read(Reader file) { return read(file, 0); }
+
+    public byte[] read(Reader reader, int offset) {
+        byte[] buffer = new byte[512];
+        int b;
+        try{
+            for (int i = offset; i < buffer.length; i++){
+                b = reader.read(); // Lire un caractère
+                if (b == -1) // Si c'est la fin de lecture (ie, y a plus rien), on arrête
+                    break;
+                buffer[i]=(byte)b;
+            }
+
+            // Trouver une condition pour savoir qu'on peut fermer
+            reader.close();
+        } catch(IOException ex) {
+            System.out.println(ex);
+        }
+        return buffer;
     }
     
     public String read(Reader reader) {

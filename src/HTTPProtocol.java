@@ -4,11 +4,45 @@
  * and open the template in the editor.
  */
 
+import java.io.*;
+import java.util.Arrays;
+
 /**
  *
  * @author belette
  */
 public class HTTPProtocol {
+
+    private String url;
+    private String method;
+    private String version;
+    private byte[] content;
+    private boolean isResponse = false;
+
+    public HTTPProtocol(byte[] data) {
+        try {
+            String msg = new String(data, "UTF-8");
+
+            if(msg.startsWith("HTTP/")) { // Si c'est une réponse
+                version = msg.split(" ")[0];
+                isResponse = true;
+
+            } else { // Sinon c'est une requête
+                String[] m = msg.split(" ");
+                switch(m[0]) {
+                    case "GET": case "PUT": case "HEAD": case "POST": case "DELETE": case "OPTIONS": case "CONNECT":
+                        method = m[0]; break;
+                    default: throw new Exception("Erreur, requête invalide");
+                }
+                url = m[1];
+                version = m[2].split("\r\n")[0];
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // ==================== STATIC =======================================
 
     public static String setResource(String url, String data) {
         String msg;
@@ -79,5 +113,55 @@ public class HTTPProtocol {
     public static String getContent(String request) {
         String[] res = request.split("\r\n\r\n");
         return request.substring(res[0].length()+4);
+    }
+
+    public static void main(String[] args) throws Exception {
+        String filePath = "fb.png";
+        File resDemandee = new File(filePath);
+        Reader file = new InputStreamReader(
+                    new FileInputStream(resDemandee));
+        char[] fileContent = read(file);
+        System.out.println("======================");
+        FileOutputStream fileW = new FileOutputStream(new File("aha_" + filePath));
+        for(int i = 0; i < fileContent.length; i++) {
+            fileW.write(fileContent[i]);
+            System.out.println(fileContent[i]);
+        }
+        fileW.flush();
+        System.out.println("Finished !");
+    }
+
+    public static char[] read(Reader reader) throws Exception {
+        char[] builder = { };
+        int length;
+        char[] buffer = new char[512];
+        int b = reader.read();
+        Integer c;
+        int i = 0;
+        while(b != -1) {
+            if(i == 512) {
+                length = builder.length;
+                builder = Arrays.copyOf(builder, length + buffer.length);
+                for(int j = 0; j < buffer.length; j++) {
+                    builder[length+j] = buffer[j];
+                }
+                i = 0;
+            }
+            System.out.println(b);
+            buffer[i] = (true) ? (char)(b ) : (char)(b);
+//            System.out.println(buffer[i]);
+            i++;
+            b = reader.read();
+        }
+
+        if(builder.length == 0) {
+            length = builder.length;
+            builder = Arrays.copyOf(builder, length + i);
+            for(int j = 0; j < i; j++) {
+                builder[length+j] = buffer[j];
+            }
+        }
+
+        return builder;
     }
 }
