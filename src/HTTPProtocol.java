@@ -120,7 +120,7 @@ public class HTTPProtocol {
         File resDemandee = new File(filePath);
         Reader file = new InputStreamReader(
                     new FileInputStream(resDemandee));
-        char[] fileContent = read(file);
+        byte[] fileContent = read(file);
         System.out.println("======================");
         FileOutputStream fileW = new FileOutputStream(new File("aha_" + filePath));
         for(int i = 0; i < fileContent.length; i++) {
@@ -129,27 +129,36 @@ public class HTTPProtocol {
         }
         fileW.flush();
         System.out.println("Finished !");
+
+        System.out.println("======================");
+        FileOutputStream f = new FileOutputStream(new File("aha_test"));
+        for(int i = -128; i < 128; i++) {
+            f.write((byte)i);
+            System.out.println("char : " + ((byte) i));
+        }
     }
 
-    public static char[] read(Reader reader) throws Exception {
-        char[] builder = { };
+    public static byte[] read(Reader reader) throws Exception {
+        byte[] builder = { };
         int length;
-        char[] buffer = new char[512];
+        byte[] buffer = new byte[512];
         int b = reader.read();
         Integer c;
         int i = 0;
         while(b != -1) {
-            if(i == 512) {
-                length = builder.length;
-                builder = Arrays.copyOf(builder, length + buffer.length);
-                for(int j = 0; j < buffer.length; j++) {
-                    builder[length+j] = buffer[j];
-                }
-                i = 0;
-            }
-            System.out.println(b);
-            buffer[i] = (true) ? (char)(b ) : (char)(b);
-//            System.out.println(buffer[i]);
+            if(i == 2) break;
+//            if(i == 512) {
+//                length = builder.length;
+//                builder = Arrays.copyOf(builder, length + buffer.length);
+//                for(int j = 0; j < buffer.length; j++) {
+//                    builder[length+j] = buffer[j];
+//                }
+//                i = 0;
+//            }
+
+            System.out.println("int :" + b);
+            buffer[i] = (byte)(b&0x000000FF);
+            System.out.println(buffer[i]);
             i++;
             b = reader.read();
         }
